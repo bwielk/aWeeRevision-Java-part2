@@ -125,11 +125,11 @@ public class Main {
     		if(!isEvenNumber(firstNum)){
     			firstNum++;//updates to another number
     			continue;
-    		}
+    		};
     	System.out.println(firstNum + " is an even number");
     	firstNum++;//updates to another number
     	counter ++;
-    	//if(counter == 5)
+    	//if(counter == 5) //limits the search
     	//	break;
     	}
     	System.out.println("Total number of even numbers found in the range of numbers");
