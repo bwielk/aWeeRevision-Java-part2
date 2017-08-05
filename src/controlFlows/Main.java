@@ -128,7 +128,7 @@ public class Main {
     		};
     	System.out.println(firstNum + " is an even number");
     	firstNum++;//updates to another number
-    	counter ++;
+    	counter++;
     	//if(counter == 5) //limits the search
     	//	break;
     	}
