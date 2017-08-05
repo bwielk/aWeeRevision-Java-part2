@@ -14,7 +14,10 @@ public class Main {
 		System.out.println(".....................................");
 		calculateInterestDesc((double) 20000, (double) 1.9, 2);*/
 		//checkPrimeNumbersWithinRange(200000, 1223400);
-		isEvenNumber(21);
+		//isEvenNumber(21);
+		evenNumbersWithinRange(23, 456);
+		System.out.println(".....................................");
+		evenNumbersWithinRange(234, 33453);
 	}
 	
 	public static void switchMethod(char value){
@@ -108,11 +111,29 @@ public class Main {
 //////////////////////////////////////////////////////////////////////////////////////////
     public static boolean isEvenNumber(int num){
     	if(num %2 == 0){
-    		System.out.println("true");
+    		//System.out.println("true");
     		return true;
     	}
-    	System.out.println("false");
+    	//System.out.println("false");
     	return false;
+    };
+    
+    public static void evenNumbersWithinRange(int startNum, int endNum){
+    	int counter = 0;
+    	int firstNum = startNum;
+    	while(firstNum <= endNum){
+    		if(!isEvenNumber(firstNum)){
+    			firstNum++;//updates to another number
+    			continue;
+    		}
+    	System.out.println(firstNum + " is an even number");
+    	firstNum++;//updates to another number
+    	counter ++;
+    	//if(counter == 5)
+    	//	break;
+    	}
+    	System.out.println("Total number of even numbers found in the range of numbers");
+    	System.out.println("between " + startNum + " and " +  endNum + " ===> " + counter);
     };
     
 }
