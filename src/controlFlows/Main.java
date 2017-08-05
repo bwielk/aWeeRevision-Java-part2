@@ -10,9 +10,7 @@ public class Main {
 		validName("aNN");
 		validName("Stephen");
 		System.out.println(".....................................");
-		calculateInterest((double) 20000, (double) 0.4);
-		System.out.println(".....................................");
-		calculateInterest((double) 400000, (double) 2.4);
+		calculateInterest((double) 20000, (double) 0.4, 5);
 		System.out.println(".....................................");
 	};
 	
@@ -40,13 +38,17 @@ public class Main {
 		};
 	};
 	
-	public static void calculateInterest(double amount, double interestRate){
-		for(int i=0; i<5; i++){
-			double sum = amount*((interestRate+(double)i)/(double)100);
-			System.out.println("Interest rate: " + (double)(interestRate + (double) i) + " per cent");
-			System.out.println("The interest rate of " + (interestRate + (double)i) + " for the amount of " + amount + " is " + (float)sum + ".");
-			System.out.println("The total sum is with the interest rate is " + (sum + amount) + "");
-			System.out.println("-----------------------------------------------------------------");
+	public static void calculateInterest(double amount, double interestRate, int interestRateLimit){
+		if(interestRateLimit > 0){
+			for(int i=0; i<(interestRateLimit + 1); i++){
+				double sum = amount*((interestRate+(double)i)/(double)100);
+				System.out.println("Interest rate: " + (double)(interestRate + (double) i) + " per cent");
+				System.out.println("The interest rate of " + (interestRate + (double)i) + " for the amount of " + amount + " is " + (float)sum + ".");
+				System.out.println("The total sum is with the interest rate is " + (sum + amount) + "");
+				System.out.println("-----------------------------------------------------------------");
+			}
+		}else{
+			System.out.println("Incorrect input of the range of interest rate");
+			}
 		};
-	};
 }
