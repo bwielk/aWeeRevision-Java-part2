@@ -13,8 +13,9 @@ public class Main {
 		calculateInterestAsc((double) 20000, (double) 1.9, 2);
 		System.out.println(".....................................");
 		calculateInterestDesc((double) 20000, (double) 1.9, 2);*/
-		checkPrime(200000, 1223400);
-	};
+		//checkPrimeNumbersWithinRange(200000, 1223400);
+		isEvenNumber(21);
+	}
 	
 	public static void switchMethod(char value){
 		char character = Character.toLowerCase(value);
@@ -74,7 +75,7 @@ public class Main {
 			}
 	};
 	
-	////////////////PRIME NUMBERS///////////////////////////////
+/////////////////////////////////PRIME NUMBERS///////////////////////////////
 	public static boolean isPrime(int n){
         if(n == 1){
             return false;
@@ -87,7 +88,7 @@ public class Main {
         return true;
     };
     
-    public static void checkPrime(int rangeStart, int rangeEnd){
+    public static void checkPrimeNumbersWithinRange(int rangeStart, int rangeEnd){
     	int counter = 0;
     		if(rangeStart < rangeEnd && rangeEnd > rangeStart){
     			for(int i=rangeStart; i<rangeEnd; i++){
@@ -101,8 +102,17 @@ public class Main {
     				};
     			};
     		}else{
-    			System.out.println("Check parameters, please!");
+    		System.out.println("Check parameters, please!");
     	};
+    };
+//////////////////////////////////////////////////////////////////////////////////////////
+    public static boolean isEvenNumber(int num){
+    	if(num %2 == 0){
+    		System.out.println("true");
+    		return true;
+    	}
+    	System.out.println("false");
+    	return false;
     };
     
 }
