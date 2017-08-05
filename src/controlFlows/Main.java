@@ -2,7 +2,7 @@ package controlFlows;
 
 public class Main {
 	public static void main(String[] args){
-		switchMethod('A');
+		/*switchMethod('A');
 		switchMethod('b');
 		switchMethod('X');
 		System.out.println(".....................................");
@@ -12,7 +12,8 @@ public class Main {
 		System.out.println(".....................................");
 		calculateInterestAsc((double) 20000, (double) 1.9, 2);
 		System.out.println(".....................................");
-		calculateInterestDesc((double) 20000, (double) 1.9, 2);
+		calculateInterestDesc((double) 20000, (double) 1.9, 2);*/
+		checkPrime(200000, 1223400);
 	};
 	
 	public static void switchMethod(char value){
@@ -72,4 +73,36 @@ public class Main {
 			System.out.println("Incorrect input of the range of interest rate");
 			}
 	};
+	
+	////////////////PRIME NUMBERS///////////////////////////////
+	public static boolean isPrime(int n){
+        if(n == 1){
+            return false;
+        };
+        for(int i=2; i <= n/2; i++){
+            if(n % i == 0){
+                return false;
+            }
+        };
+        return true;
+    };
+    
+    public static void checkPrime(int rangeStart, int rangeEnd){
+    	int counter = 0;
+    		if(rangeStart < rangeEnd && rangeEnd > rangeStart){
+    			for(int i=rangeStart; i<rangeEnd; i++){
+    				if(isPrime(i)){
+    					counter++;
+    					System.out.println(i + " is a prime number");
+    				if(counter == 3){
+    					System.out.println("The counter has reached first 3 detected prime numbers within the quoted range");
+    				break;
+    					};
+    				};
+    			};
+    		}else{
+    			System.out.println("Check parameters, please!");
+    	};
+    };
+    
 }
