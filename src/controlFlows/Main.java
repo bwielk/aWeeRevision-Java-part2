@@ -16,7 +16,7 @@ public class Main {
 		evenNumbersWithinRange(23, 456);
 		System.out.println(".....................................");
 		evenNumbersWithinRange(234, 33453);
-	}
+	};
 
 	public static void switchMethod(char value) {
 		char character = Character.toLowerCase(value);
@@ -31,8 +31,7 @@ public class Main {
 		default:
 			System.out.println("Not found");
 			break;
-		}
-		;
+		};
 	};
 
 	public static void validName(String name) {
@@ -48,8 +47,7 @@ public class Main {
 		default:
 			System.out.println("Sorry. You have no access.");
 			break;
-		}
-		;
+		};
 	};
 
 	public static void calculateInterestAsc(double amount, double interestRate, int interestRateLimit) {
@@ -57,8 +55,7 @@ public class Main {
 			for (int i = 0; i < (interestRateLimit); i++) {
 				double interestRateValue = amount * ((interestRate + (double) i) / (double) 100);
 				System.out.println("Interest rate: " + (double) (interestRate + (double) i) + "%");
-				System.out.println("The interest rate of " + (interestRate + (double) i) + "% for the amount of "
-						+ amount + " is " + (float) interestRateValue + ".");
+				System.out.println("The interest rate of " + (interestRate + (double) i) + "% for the amount of " + amount + " is " + (float) interestRateValue + ".");
 				System.out.println("The total sum is with the interest rate is " + (interestRateValue + amount) + "");
 				System.out.println("-----------------------------------------------------------------");
 			}
@@ -72,16 +69,14 @@ public class Main {
 			double intRateDescFirstValue = (float) (amount * ((double) interestRateLimit + (double) interestRate)
 					/ (double) 100);
 			System.out.println("Interest rate: " + ((double) interestRateLimit + (double) interestRate) + "%");
-			System.out.println("The interest rate of " + ((double) interestRateLimit + (double) interestRate)
-					+ "% for the amount of " + amount + " is " + intRateDescFirstValue + ".");
+			System.out.println("The interest rate of " + ((double) interestRateLimit + (double) interestRate) + "% for the amount of " + amount + " is " + intRateDescFirstValue + ".");
 			System.out.println("The total sum is with the interest rate is " + (amount + intRateDescFirstValue) + "");
 			System.out.println("-----------------------------------------------------------------");
 			for (int i = (interestRateLimit); i >= 0; i--) {
 				double interestRateDesc = (double) i + interestRate;
 				double sumIntRateDesc = amount * (interestRateDesc / (double) 100);
 				System.out.println("Interest rate: " + interestRateDesc + "%");
-				System.out.println("The interest rate of " + interestRateDesc + "% for the amount of " + amount + " is "
-						+ (float) sumIntRateDesc + ".");
+				System.out.println("The interest rate of " + interestRateDesc + "% for the amount of " + amount + " is " + (float) sumIntRateDesc + ".");
 				System.out.println("The total sum is with the interest rate is " + (sumIntRateDesc + amount) + "");
 				System.out.println("-----------------------------------------------------------------");
 			}
@@ -100,9 +95,8 @@ public class Main {
 		for (int i = 2; i <= n / 2; i++) {
 			if (n % i == 0) {
 				return false;
-			}
-		}
-		;
+			};
+		};
 		return true;
 	};
 
@@ -114,19 +108,14 @@ public class Main {
 					counter++;
 					System.out.println(i + " is a prime number");
 					if (counter == 3) {
-						System.out.println(
-								"The counter has reached first 3 detected prime numbers within the quoted range");
+						System.out.println("The counter has reached first 3 detected prime numbers within the quoted range");
 						break;
-					}
-					;
-				}
-				;
-			}
-			;
+					};
+				};
+			};
 		} else {
 			System.out.println("Check parameters, please!");
-		}
-		;
+		};
 	};
 
 	//////////////////////////////////////////////////////////////////////////////////////////
@@ -146,14 +135,13 @@ public class Main {
 			if (!isEvenNumber(firstNum)) {
 				firstNum++;// updates to another number
 				continue;
-			}
-			;
+			};
 			System.out.println(firstNum + " is an even number");
 			firstNum++;// updates to another number
 			counter++;
 			// if(counter == 5) //limits the search
 			// break;
-		}
+		};
 		System.out.println("Total number of even numbers found in the range of numbers");
 		System.out.println("between " + startNum + " and " + endNum + " ===> " + counter);
 	};
