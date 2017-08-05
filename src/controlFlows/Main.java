@@ -10,8 +10,9 @@ public class Main {
 		validName("aNN");
 		validName("Stephen");
 		System.out.println(".....................................");
-		calculateInterest((double) 20000, (double) 0.4, 5);
+		//calculateInterestAsc((double) 20000, (double) 1.5, 3);
 		System.out.println(".....................................");
+		calculateInterestDesc((double) 20000, (double) 1.5, 3);
 	};
 	
 	public static void switchMethod(char value){
@@ -38,17 +39,36 @@ public class Main {
 		};
 	};
 	
-	public static void calculateInterest(double amount, double interestRate, int interestRateLimit){
+	public static void calculateInterestAsc(double amount, double interestRate, int interestRateLimit){
 		if(interestRateLimit > 0){
-			for(int i=0; i<(interestRateLimit + 1); i++){
+			for(int i=0; i<(interestRateLimit); i++){
 				double sum = amount*((interestRate+(double)i)/(double)100);
-				System.out.println("Interest rate: " + (double)(interestRate + (double) i) + " per cent");
-				System.out.println("The interest rate of " + (interestRate + (double)i) + " for the amount of " + amount + " is " + (float)sum + ".");
+				System.out.println("Interest rate: " + (double)(interestRate + (double) i) + "%");
+				System.out.println("The interest rate of " + (interestRate + (double)i) + "% for the amount of " + amount + " is " + (float)sum + ".");
 				System.out.println("The total sum is with the interest rate is " + (sum + amount) + "");
 				System.out.println("-----------------------------------------------------------------");
 			}
 		}else{
 			System.out.println("Incorrect input of the range of interest rate");
 			}
-		};
+	};
+	
+	public static void calculateInterestDesc(double amount, double interestRate, int interestRateLimit){
+		if(interestRateLimit > 0){
+			double sumIntRate1 = (float)(amount*((double)interestRateLimit + (double) interestRate)/(double)100);
+			System.out.println("Interest rate: " + ((double)interestRateLimit + (double) interestRate) + "%");
+			System.out.println("The interest rate of " + ((double)interestRateLimit + (double) interestRate) + "% for the amount of " + amount + " is " + sumIntRate1 + ".");
+			System.out.println("The total sum is with the interest rate is " + (amount + sumIntRate1) + "");
+			System.out.println("-----------------------------------------------------------------");
+			for(int i=interestRateLimit; i>0; i--){
+				double sumIntRateAsc = amount*(((double) i/(double)100));
+				System.out.println("Interest rate: " + ((double) i) + "%");
+				System.out.println("The interest rate of " + ((double)i) + "% for the amount of " + amount + " is " + (float)sumIntRateAsc + ".");
+				System.out.println("The total sum is with the interest rate is " + (sumIntRateAsc + amount) + "");
+				System.out.println("-----------------------------------------------------------------");
+			}
+		}else{
+			System.out.println("Incorrect input of the range of interest rate");
+			}
+	};
 }
