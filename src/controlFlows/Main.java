@@ -1,7 +1,22 @@
 package controlFlows;
 
+import java.util.Scanner;
+
 public class Main {
+	
+	private static Scanner scanner = new Scanner(System.in);
+	
 	public static void main(String[] args) {
+		//////////////////////SCANNER///////////////////////////////
+		//Entering data from the machina via terminal
+		int[] myIntegers = getIntegers1(5);
+		for(int i=0; i<myIntegers.length; i++){
+			System.out.println("Index " + i + " : value : " + myIntegers[i]);
+		}
+		System.out.println("The average of the array is " + getAverage(myIntegers));
+		
+		
+		
 		/*
 		 * switchMethod('A'); switchMethod('b'); switchMethod('X');
 		 * System.out.println(".....................................");
@@ -10,13 +25,37 @@ public class Main {
 		 * calculateInterestAsc((double) 20000, (double) 1.9, 2);
 		 * System.out.println(".....................................");
 		 * calculateInterestDesc((double) 20000, (double) 1.9, 2);
-		 */
 		// checkPrimeNumbersWithinRange(200000, 1223400);
-		// isEvenNumber(21);
+		// isEvenNumber(21);]
 		evenNumbersWithinRange(23, 456);
 		System.out.println(".....................................");
 		evenNumbersWithinRange(234, 33453);
+		*/
 	};
+	
+	public static int[] getIntegers1(int number){
+		System.out.println("Enter " + number + " integer values\r");
+		int[] values = new int[number];
+		for(int i=0; i<values.length; i++){
+			values[i] = scanner.nextInt(); //Automatic 
+		}
+		return values;
+	}
+	
+	public static double getAverage(int[] array){
+		int sum = 0;
+		for(int i =0; i<array.length; i++){
+			sum += array[i];
+		}
+		return (double)sum/(double)array.length;
+	}
+	
+	
+	private static int[] getIntegers(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 	public static void switchMethod(char value) {
 		char character = Character.toLowerCase(value);
@@ -127,7 +166,7 @@ public class Main {
 		// System.out.println("false");
 		return false;
 	};
-
+	
 	public static void evenNumbersWithinRange(int startNum, int endNum) {
 		int counter = 0;
 		int firstNum = startNum;
@@ -145,5 +184,4 @@ public class Main {
 		System.out.println("Total number of even numbers found in the range of numbers");
 		System.out.println("between " + startNum + " and " + endNum + " ===> " + counter);
 	};
-
 }
