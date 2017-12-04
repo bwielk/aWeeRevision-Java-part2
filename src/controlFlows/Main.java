@@ -13,11 +13,9 @@ public class Main {
 		for(int i=0; i<myIntegers.length; i++){
 			System.out.println("Index " + i + " : value : " + myIntegers[i]);
 		}
-		System.out.println("The average of the array is " + getAverage(myIntegers));
-		
-		
 		
 		/*
+		System.out.println("The average of the array is " + getAverage(myIntegers));
 		 * switchMethod('A'); switchMethod('b'); switchMethod('X');
 		 * System.out.println(".....................................");
 		 * validName("ALeX"); validName("aNN"); validName("Stephen");
