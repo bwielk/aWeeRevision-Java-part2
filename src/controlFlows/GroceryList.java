@@ -20,5 +20,19 @@ public class GroceryList {
 	public void modifyGroceryList(String string, int position){
 		shoppingList.set(position, string);
 	}
+	
+	public void removeGroceryItem(int position){
+		shoppingList.remove(position);
+	}
+	
+	public String findItem(String searchedItem){
+		boolean exists = shoppingList.contains(searchedItem);
+		if(exists){
+			return shoppingList.get(shoppingList.indexOf(searchedItem)) + " exists in the list";
+		}else{
+			return "No such item";
+		}
+	}
+			
 
 }
