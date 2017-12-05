@@ -58,19 +58,18 @@ public class Display {
 	}
 	
 	public static void modifyItem(){
-		System.out.println("Enter item number : ");
-		int itemNo = scanner.nextInt();
-		scanner.nextLine();
+		System.out.println("Enter item name : ");
+		String item = scanner.nextLine();
 		System.out.println("Enter the replacement item : ");
 		String newItem = scanner.nextLine();
-		groceryList.modifyGroceryList(newItem, (itemNo-1));
+		groceryList.modifyGroceryList(item, newItem);
 	}
 	
 	public static void removeItem(){
-		System.out.println("Enter item number to remove : ");
-		int index = scanner.nextInt();
+		System.out.println("Enter item name to remove : ");
+		String item = scanner.nextLine();
 		scanner.nextLine();
-		groceryList.removeGroceryItem(index-1);
+		groceryList.removeGroceryItem(item);
 	}
 	
 	public static void searchForItem(){
