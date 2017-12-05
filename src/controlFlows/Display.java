@@ -42,7 +42,7 @@ public class Display {
 		}
 	}
 	
-	public void printInstructions(){
+	public static void printInstructions(){
 		System.out.println("\nPress ");
 		System.out.println("\t 1 = to print the list of grocery items");
 		System.out.println("\t 2 = to add an item the list of grocery items");
@@ -70,13 +70,12 @@ public class Display {
 		System.out.println("Enter item number to remove : ");
 		int index = scanner.nextInt();
 		scanner.nextLine();
-		groceryList.removeGroceryItem(index);
+		groceryList.removeGroceryItem(index-1);
 	}
 	
 	public static void searchForItem(){
 		System.out.println("Enter item name to search : ");
 		String itemToSearch = scanner.nextLine();
-		scanner.nextLine();
 		System.out.println(groceryList.findItem(itemToSearch));
 	}
 	
